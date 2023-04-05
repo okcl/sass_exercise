@@ -1,0 +1,50 @@
+@use "functions" as f;
+@import "variables";
+
+
+@mixin article-card($color, $border-color, $font-size: 1rem) {
+  color: $color;
+  border: f.rem(1) solid $border-color;
+  font-size: $font-size;
+}
+
+* {
+  text-align: center;
+}
+
+div {
+  display: inline-block;
+  border: f.rem(1) solid $color-primary;
+  padding: f.rem(20);
+
+  h1 {
+    color: $color-tertiary;
+    text-decoration: f.rem(1) underline $color-secondary;
+  }
+
+  section {
+    display: flex;
+
+    article {
+      flex: 1;
+      padding: f.rem(5);
+      @include article-card($color-secondary, $color-tertiary);
+
+      &:nth-child(odd) {
+        color: $color-secondary;
+      }
+
+      &:nth-child(even) {
+        color: $color-primary;
+      }
+    }
+
+    &:last-child {
+      margin-top: f.rem(20);
+
+      article {
+        @include article-card($color-tertiary, $color-secondary, f.rem(24));
+      }
+    }
+  }
+}

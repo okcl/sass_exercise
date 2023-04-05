@@ -1,0 +1,28 @@
+* {
+  text-align: center;
+}
+
+div {
+  display: inline-block;
+  border: 1px solid red;
+  padding: 20px;
+}
+div h1 {
+  color: green;
+  -webkit-text-decoration: 1px underline blue;
+          text-decoration: 1px underline blue;
+}
+
+section {
+  display: flex;
+}
+section article {
+  border: 1px solid green;
+  padding: 5px;
+}
+section article:nth-child(odd) {
+  color: blue;
+}
+section article:nth-child(even) {
+  color: red;
+}/*# sourceMappingURL=style.css.map */

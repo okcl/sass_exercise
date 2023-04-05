@@ -1,0 +1,45 @@
+.content h2, .content h1 {
+  align-self: center;
+  color: green;
+  -webkit-text-decoration: 0.0625rem underline blue;
+          text-decoration: 0.0625rem underline blue;
+}
+
+* {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  border: 0.0625rem solid red;
+  padding: 1.25rem;
+}
+.content h2 {
+  padding: 1rem;
+  border: red 0.1875rem solid;
+}
+.content section {
+  display: flex;
+}
+.content section article {
+  flex: 1;
+  padding: 0.3125rem;
+  color: blue;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+}
+.content section article:nth-child(odd) {
+  color: blue;
+}
+.content section article:nth-child(even) {
+  color: red;
+}
+.content section:last-child {
+  margin-top: 1.25rem;
+}
+.content section:last-child article {
+  color: green;
+  border: 0.0625rem solid blue;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
